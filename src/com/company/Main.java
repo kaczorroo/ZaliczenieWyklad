@@ -9,37 +9,42 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Start pogramu.");
-        System.out.println("Wybierz jaki rodzaj ciągu chcesz uzyskać.");
-        System.out.println("1)Ciąg arytmetyczny.");
-        System.out.println("2)Ciąg geometryczny.");
-        Scanner ciag = new Scanner(System.in);
-        int wciag = ciag.nextInt();
-        if(wciag==1){
-            System.out.println("Wybrałeś ciąg arytmetyczny. Składa się z 10 wyrazów.");
-            System.out.println("an=a1+(n-1)*r");
-            System.out.println("Podaj pierwszy wyraz ciągu.");
-                Scanner ajeden = new Scanner(System.in);
-                int pierwszywyraz = ajeden.nextInt();
-            System.out.println("Podaj r.");
-                Scanner roznica = new Scanner(System.in);
-                int r = roznica.nextInt();
-            System.out.println(ciaga(10));
+        int[] ciag={1,2,3,4,5,11,12,13,14,15,21,22,23,24,25,33,44,55,66,77,88,99,100};
+        int i;
+        int ciagWynik=0;
+        int srednia;
+        for(i=0; i<ciag.length;i++){
+            ciagWynik=ciagWynik+ciag[i];
         }
-        else if(wciag==2){
-            System.out.println("Wybrałeś ciąg geometryczny. Składa się z 10 wyrazów.");
-            System.out.println("an=a1*q^(n-1)");
-            System.out.println();
-
-        }
-        else System.out.println("Wybrana pozycja nie istnieje!");
-        System.out.println("Koniec programu.");
-    }
-    public static long ciaga(long n){
-        if(n==1 || n==0){
-            return n;
-        }
-        else
-            return ciaga(n-2)+ciaga(n-1);
+        srednia=ciagWynik/ciag.length;
+        System.out.println("Srednia arytmetyczna ciagu wynosi: "+srednia);
     }
 }
+
+/**
+ *
+ System.out.println("Start pogramu.");
+ System.out.println("Wybierz jaki rodzaj ciągu chcesz uzyskać.");
+ System.out.println("1)Ciąg arytmetyczny.");
+ System.out.println("2)Ciąg geometryczny.");
+ Scanner ciag = new Scanner(System.in);
+ int wciag = ciag.nextInt();
+ if(wciag==1){
+ System.out.println("Wybrałeś ciąg arytmetyczny. Składa się z 10 wyrazów.");
+ System.out.println("an=a1+(n-1)*r");
+ System.out.println("Podaj pierwszy wyraz ciągu.");
+ Scanner ajeden = new Scanner(System.in);
+ int pierwszywyraz = ajeden.nextInt();
+ System.out.println("Podaj r.");
+ Scanner roznica = new Scanner(System.in);
+ int r = roznica.nextInt();
+ }
+ else if(wciag==2){
+ System.out.println("Wybrałeś ciąg geometryczny. Składa się z 10 wyrazów.");
+ System.out.println("an=a1*q^(n-1)");
+ System.out.println();
+
+ }
+ else System.out.println("Wybrana pozycja nie istnieje!");
+ System.out.println("Koniec programu.");
+ */
