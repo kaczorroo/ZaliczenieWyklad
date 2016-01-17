@@ -9,6 +9,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        System.out.println("Start programu.");
+        System.out.println("");
         //Tworze tablice z ciagiem.
         int[] ciag = {1, 2, 3, 4, 5, 11, 12, 13, 14, 15, 21, 22, 23, 24, 25, 33, 44, 55, 66, 77, 88, 99, 100};
         int i;
@@ -32,6 +34,23 @@ public class Main {
             if (maxWynik < ciag[n]) {
                 maxWynik = ciag[n];
             }
+        //Wariancja ciagu
+        /**
+         *
+         */
+        //Odchylenie standardowe
+        /**
+         * double std = 0.0;
+         * double avg = mean(vals);
+         *
+         * for (int i=0; i< vals.length; i++)
+         *     std += (vals[i]-avg)*(vals[i]-avg);
+         *
+         *     std/=vals.length;
+         *     std=Math.sqrt(std)
+         *
+         *     return std;
+         */
         System.out.println("Suma wszystkich wyrazow ciagu wynosi: " + ciagWynik);
         System.out.println("Ilosc wyrazow w ciagu wynosi: " + ciag.length);
         System.out.println("Srednia arytmetyczna ciagu wynosi: " + srednia);
@@ -39,6 +58,8 @@ public class Main {
         System.out.println("Wariancja ciagu wynosi: ");
         System.out.println("Wartosc minimalna ciagu to: " + minWynik);
         System.out.println("Wartosc maxymalna ciagu to: " + maxWynik);
+        System.out.println("");
+        System.out.println("Koniec programu.");
     }
 }
 
