@@ -8,7 +8,47 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
+        double[] ciag = {1, 2, 3, 4, 5, 11, 12, 13, 14, 15, 21, 22, 23, 24, 25, 33, 44, 55, 66, 77, 88, 99, 100};
+        System.out.println("Suma wszystkich wyrazow ciagu wynosi: "+sumaWyrazow(ciag));
+        System.out.println("Ilosc wyrazow w ciagu wynosi: " + ciag.length);
+        System.out.println("Srednia arytmetyczna ciagu wynosi: "+sredniaArytmetyczna(ciag));
+        najmniejsza(ciag);
+        najwieksza(ciag);
+        System.out.println("Odchylenie Standardowe wynosi: ");
+        System.out.println("Wariancja ciagu wynosi: ");
+        System.out.println("");
+        System.out.println("Koniec programu.");
     }
+    private static double sumaWyrazow(double[] ciag){
+        double suma=0;
+        for (double i : ciag){
+            suma=suma+i;
+        }
+        return suma;
+    }
+    private static double sredniaArytmetyczna(double[] ciag){
+        double srednia=sumaWyrazow(ciag)/ciag.length;
+        return srednia;
+    }
+    private static void najmniejsza(double[] ciag){
+        double najmniejsza=ciag[0];
+        for (double i : ciag){
+            if(i<najmniejsza){
+                najmniejsza=i;
+            }
+        }
+        System.out.println("Wartosc minimalna ciagu to: "+najmniejsza);
+    }
+    private static void najwieksza(double[] ciag){
+        double najwieksza=ciag[0];
+        for (double i : ciag){
+            if(i>najwieksza){
+                najwieksza=i;
+            }
+        }
+        System.out.println("Wartosc maxymalna ciagu to: "+najwieksza);
+    }
+
 }
 
 
